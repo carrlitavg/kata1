@@ -3,7 +3,7 @@ package software.ulpgc.katas;
 import java.time.LocalDate;
 
 public record Person(String name, LocalDate birthday) {
-    private static finaL int DAYS_PER_YEAR = 365;
+    private static final int DAYS_PER_YEAR = 365;
 
     public int age() {
         return toYears(LocalDate.now().toEpochDay() - birthday.toEpochDay());
